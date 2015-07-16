@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<!-- saved from url=(0041)http://v3.bootcss.com/examples/dashboard/ -->
+<html lang="zh-CN"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="http://v3.bootcss.com/favicon.ico">
+
+    <title>JtangAPM</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="http://cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="./JtangAPM/ie-emulation-modes-warning.js"></script>
+
+    <!-- Custom styles for this template -->
+    <!--  <link href="http://v3.bootcss.com/examples/dashboard/dashboard.css" rel="stylesheet"> -->
+    <link href="./JtangAPM/dashboard.css" rel="stylesheet">
+
+    <!-- Echart -->
+    <script src="./JtangAPM/echarts-all.js"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <nav class="navbar  navbar-inverse navbar-fixed-top">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="http://v3.bootcss.com/examples/dashboard/#">JtangAPM</a>
+        </div>
+
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="http://v3.bootcss.com/components/#">Infrastructure <span class="sr-only">(current)</span></a></li>
+            <li><a href="http://v3.bootcss.com/components/#">Service</a></li>
+            <li class="dropdown">
+              <a href="http://v3.bootcss.com/components/#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">APPs <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="http://v3.bootcss.com/components/#">Action</a></li>
+                <li><a href="http://v3.bootcss.com/components/#">Another action</a></li>
+                <li><a href="http://v3.bootcss.com/components/#">Something else here</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="http://v3.bootcss.com/components/#">Separated link</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="http://v3.bootcss.com/components/#">One more separated link</a></li>
+              </ul>
+            </li>
+          </ul>
+          <form class="navbar-form navbar-left" role="search">
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="Search">
+            </div>
+            <button type="submit" class="btn btn-default">Submit</button>
+          </form>
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="http://v3.bootcss.com/examples/dashboard/#">Dashboard</a></li>
+            <li><a href="http://v3.bootcss.com/examples/dashboard/#">Settings</a></li>
+            <li><a href="http://v3.bootcss.com/examples/dashboard/#">Profile</a></li>
+            <li><a href="http://v3.bootcss.com/examples/dashboard/#">Login</a></li>
+          </ul>
+          <form class="navbar-form navbar-right">
+            <input type="text" class="form-control" placeholder="Search...">
+          </form>
+        </div><!-- /.navbar-collapse -->
+
+      </div>
+    </nav>
+
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-3 col-md-2 sidebar">
+          <li class="dropdown nav nav-sidebar">
+              <a class="dropdown-toggle nav-sidebar-dropdown"- data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Hosts <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="http://v3.bootcss.com/components/#">Host1</a></li>
+                <li><a href="http://v3.bootcss.com/components/#">Host2</a></li>
+                <li><a href="http://v3.bootcss.com/components/#">Host3</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="http://v3.bootcss.com/components/#">Server1</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="http://v3.bootcss.com/components/#">Other Machine1</a></li>
+              </ul>
+            </li>
+          <ul class="nav nav-sidebar">
+            <li class="active"><a href="http://v3.bootcss.com/examples/dashboard/#">Overview <span class="sr-only">(current)</span></a></li>
+            <li><a href="http://v3.bootcss.com/examples/dashboard/#">CPU</a></li>
+            <li><a href="http://v3.bootcss.com/examples/dashboard/#">Memory</a></li>
+            <li><a href="http://v3.bootcss.com/examples/dashboard/#">Network</a></li>
+            <li><a href="http://v3.bootcss.com/examples/dashboard/#">Disk</a></li>
+          </ul>
+          <ul class="nav nav-sidebar">
+            <li><a href="">Nav item</a></li>
+            <li><a href="">Nav item again</a></li>
+            <li><a href="">One more nav</a></li>
+            <li><a href="">Another nav item</a></li>
+            <li><a href="">More navigation</a></li>
+          </ul>
+          <ul class="nav nav-sidebar">
+            <li><a href="">Nav item again</a></li>
+            <li><a href="">One more nav</a></li>
+            <li><a href="">Another nav item</a></li>
+          </ul>
+        </div>
+        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+          <h1 class="page-header">Dashboard</h1>
+
+          <div class="row placeholders">
+            <div class="col-xs-6 col-sm-3 placeholder" >
+              <div id="CPU_gauge" style="height:400px">
+              </div>
+            </div>
+            <div class="col-xs-6 col-sm-3 placeholder"">
+              <img data-src="holder.js/200x200/auto/vine" class="img-responsive" alt="Generic placeholder thumbnail">
+              <h4>Label</h4>
+              <span class="text-muted">这里你想写啥就写啥</span>
+            </div>
+            <div class="col-xs-6 col-sm-6 placeholder">
+              <div id="line-chart" style="height:400px">
+              </div>
+            </div>
+            
+          </div>
+
+          <h2 class="sub-header">Section1 title</h2>
+          <div class="table-responsive">
+            <div id="line-chart2" style="height:400px">
+            </div>
+          </div>
+
+          <h2 class="sub-header">Section2 title</h2>
+          <div class="table-responsive">
+            <table class="table table-striped">
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th>Header</th>
+                  <th>Header</th>
+                  <th>Header</th>
+                  <th>Header</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1,001</td>
+                  <td>Lorem</td>
+                  <td>ipsum</td>
+                  <td>dolor</td>
+                  <td>sit</td>
+                </tr>
+                <tr>
+                  <td>1,002</td>
+                  <td>amet</td>
+                  <td>consectetur</td>
+                  <td>adipiscing</td>
+                  <td>elit</td>
+                </tr>
+                <tr>
+                  <td>1,003</td>
+                  <td>Integer</td>
+                  <td>nec</td>
+                  <td>odio</td>
+                  <td>Praesent</td>
+                </tr>
+                <tr>
+                  <td>1,003</td>
+                  <td>libero</td>
+                  <td>Sed</td>
+                  <td>cursus</td>
+                  <td>ante</td>
+                </tr>
+                <tr>
+                  <td>1,004</td>
+                  <td>dapibus</td>
+                  <td>diam</td>
+                  <td>Sed</td>
+                  <td>nisi</td>
+                </tr>
+                <tr>
+                  <td>1,005</td>
+                  <td>Nulla</td>
+                  <td>quis</td>
+                  <td>sem</td>
+                  <td>at</td>
+                </tr>
+                <tr>
+                  <td>1,006</td>
+                  <td>nibh</td>
+                  <td>elementum</td>
+                  <td>imperdiet</td>
+                  <td>Duis</td>
+                </tr>
+                <tr>
+                  <td>1,007</td>
+                  <td>sagittis</td>
+                  <td>ipsum</td>
+                  <td>Praesent</td>
+                  <td>mauris</td>
+                </tr>
+                <tr>
+                  <td>1,008</td>
+                  <td>Fusce</td>
+                  <td>nec</td>
+                  <td>tellus</td>
+                  <td>sed</td>
+                </tr>
+                <tr>
+                  <td>1,009</td>
+                  <td>augue</td>
+                  <td>semper</td>
+                  <td>porta</td>
+                  <td>Mauris</td>
+                </tr>
+                <tr>
+                  <td>1,010</td>
+                  <td>massa</td>
+                  <td>Vestibulum</td>
+                  <td>lacinia</td>
+                  <td>arcu</td>
+                </tr>
+                <tr>
+                  <td>1,011</td>
+                  <td>eget</td>
+                  <td>nulla</td>
+                  <td>Class</td>
+                  <td>aptent</td>
+                </tr>
+                <tr>
+                  <td>1,012</td>
+                  <td>taciti</td>
+                  <td>sociosqu</td>
+                  <td>ad</td>
+                  <td>litora</td>
+                </tr>
+                <tr>
+                  <td>1,013</td>
+                  <td>torquent</td>
+                  <td>per</td>
+                  <td>conubia</td>
+                  <td>nostra</td>
+                </tr>
+                <tr>
+                  <td>1,014</td>
+                  <td>per</td>
+                  <td>inceptos</td>
+                  <td>himenaeos</td>
+                  <td>Curabitur</td>
+                </tr>
+                <tr>
+                  <td>1,015</td>
+                  <td>sodales</td>
+                  <td>ligula</td>
+                  <td>in</td>
+                  <td>libero</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <script type="text/javascript">
+        // CPU usage仪表板
+        // 基于准备好的dom，初始化echarts图表
+        var myChart = echarts.init(document.getElementById('CPU_gauge')); 
+        
+        var option = {
+            
+            
+            tooltip: {
+                show: true,
+                //填充tooltip内容
+                formatter: function (params,ticket,callback) {
+                    console.log(params)
+                    var res = 'Function formatter s : <br/>';
+                    res += '<br/>' + params.seriesName + ' : ' + params.value;
+                    for (var i = 0, l = params.length; i < l; i++) {
+                        //res += '<br/>' + params[i].seriesName + ' : ' + params[i].value;
+                        res += '<br/>' + params[i].seriesName + ' : ' + params[i].value;
+                    }
+                    
+                    //callback(ticket, res);
+                    return res;
+                }
+            },
+            legend: {
+                orient: 'horizontal', // 'vertical'
+                x: 'center', // 'center' | 'left' | {number},
+                y: 'top', // 'center' | 'bottom' | {number}
+                textStyle: {color: 'red'},
+                data:['CPU usage']
+            },
+           
+            series : [
+                {
+                    "name":"CPU usage",
+                    "type":"gauge",
+                    "data":[66]
+                }
+            ]
+        };
+
+
+        // 为echarts对象加载数据 
+        myChart.setOption(option); 
+
+
+    </script>
+    
+    <script type="text/javascript">
+        // 折线line chart
+        // 基于准备好的dom，初始化echarts图表
+        var myChart = echarts.init(document.getElementById('line-chart')); 
+        
+        var option = {
+            title : { text: 'CPU使用百分比',},
+                tooltip : {trigger: 'axis'},
+                legend: {
+                    data:['user', 'system', 'idle']
+                },
+                toolbox: { show : true, feature : {mark : {show: true}, dataView : {show: true, readOnly: false}, magicType : {show: true, type: ['line', 'bar']}, restore : {show: true}, saveAsImage : {show: true}}},
+                calculable : true,
+            xAxis : [
+                {
+                    type : 'category',
+                    data : ["2015-07-15","2015-07-16","2015-07-17","2015-07-18","2015-07-19","2015-07-20"]
+                }
+            ],
+            yAxis : [
+                {
+                    type : 'value'
+                }
+            ],
+            series : [
+                {
+                    "name":"CPU",
+                    "type":"line",
+                    "data":[5, 20, 40, 10, 10, 20]
+                }
+            ]
+        };
+
+        // 为echarts对象加载数据 
+        myChart.setOption(option); 
+    </script>
+
+    <script type="text/javascript">
+        // 折线line chart
+        // 基于准备好的dom，初始化echarts图表
+        var myChart = echarts.init(document.getElementById('line-chart2')); 
+        
+        var option = {
+                title : { text: 'CPU使用百分比',
+                          orient: 'horizontal', // 'vertical'
+                          x: 'center', // 'center' | 'left' | {number},
+                          y: 'top', // 'center' | 'bottom' | {number}
+                },
+                tooltip : {trigger: 'axis'},
+                legend: {
+                    data:['user', 'system', 'idle'],
+                    orient: 'horizontal', // 'vertical'
+                    x: 'left', // 'center' | 'left' | {number},
+                    y: 'top', // 'center' | 'bottom' | {number}
+                },
+                toolbox: { show : true, feature : {mark : {show: true}, dataView : {show: true, readOnly: false}, magicType : {show: true, type: ['line', 'bar']}, restore : {show: true}, saveAsImage : {show: true}}},
+                calculable : true,
+            xAxis : [
+                {
+                    type : 'category',
+                    data : ["2015-07-15","2015-07-16","2015-07-17","2015-07-18","2015-07-19","2015-07-20"]
+                }
+            ],
+            yAxis : [
+                {
+                    type : 'value'
+                }
+            ],
+            series : [
+                {
+                    "name":"CPU",
+                    "type":"line",
+                    "data":[5, 20, 40, 10, 10, 20]
+                }
+            ]
+        };
+
+        // 为echarts对象加载数据 
+        myChart.setOption(option); 
+    </script>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="./JtangAPM/jquery.min.js"></script>
+    <script src="./JtangAPM/bootstrap.min.js"></script>
+    <!-- Just to make our placeholder images work. Don't actually copy the next line! -->
+    <!-- <script src="./JtangAPM/holder.min.js"></script> -->
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="./JtangAPM/ie10-viewport-bug-workaround.js"></script>
+
+</body></html>
